@@ -2,17 +2,15 @@
 //
 
 #include "pch.h"
-#include "framework.h"
-#include "beeMP.h"
 
-uint32_t fastImage::_rowStride { 0 };
+uint32_t beeMP::_rowStride { 0 };
 
-void fastImage::error_log( const char* message )
+void beeMP::error_log( const char* message )
 {
 	std::cerr << "[fastImage] [ERROR] " << message  << std::endl;
 }
 
-void fastImage::verify_bitmask_info( bmp_colour_header_t& colourHeader )
+void beeMP::verify_bitmask_info( bmp_colour_header_t& colourHeader )
 {
 	bmp_colour_header_t expectedColourHeader { 0 };
 
@@ -29,7 +27,7 @@ void fastImage::verify_bitmask_info( bmp_colour_header_t& colourHeader )
 	}
 }
 
-uint32_t fastImage::align_stride( uint32_t stride )
+uint32_t beeMP::align_stride( uint32_t stride )
 {
 	_rowStride = stride;
 	uint32_t newStride = _rowStride;
@@ -42,7 +40,7 @@ uint32_t fastImage::align_stride( uint32_t stride )
 	return newStride;
 }
 
-uint8_t* fastImage::load_bitmap( const char* file, uint32_t& width, uint32_t& height )
+uint8_t* beeMP::load_bitmap( const char* file, uint32_t& width, uint32_t& height )
 {
 	bmp_file_header_t	bmpHeader;
 	bmp_info_header_t	bmpInfo;

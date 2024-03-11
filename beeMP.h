@@ -1,15 +1,5 @@
 #pragma once
-
-#pragma once
-
-//#pragma pack(push, 1)
-
-#include <iostream>
-#include <cstdint>
-#include <vector>
-#include <string>
-#include <fstream>
-#include <format>
+#pragma pack(push, 1)
 
 /* BMP Related Macros */
 #define BMP_FILE_TYPE			0x4D42
@@ -22,8 +12,8 @@
 #define PNG		".png"
 #define JPEG	".jpeg"
 
-/* A fast static library for loading images*/
-class fastImage
+/* A fast static library for loading bitmaps*/
+class beeMP
 {
 private:
 	/* Struct to contain the bitmap header data */
@@ -75,4 +65,4 @@ private:
 public:
 	static uint8_t* load_bitmap( const char* file, uint32_t& width, uint32_t& height );
 };
-//#pragma pack(pop)
+#pragma pack(pop)
