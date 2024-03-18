@@ -12,8 +12,7 @@
 											HOW TO USE:				
 											Create two unsigned ints in your class to store dimensions
 
-											Create a vector<uint8_t> in your class to store the data.
-												-> I will fix this later on.
+											Create an unsigned char* in your class to store the data.
 
 											Use beeMP::load() and pass the texture location and 
 											variables in.
