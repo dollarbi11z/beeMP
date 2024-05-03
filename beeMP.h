@@ -17,9 +17,6 @@
 											Use beeMP::load() and pass the texture location and 
 											variables in.
 
-										    There is also a boolean value for if the image has alpha
-											channels and this will determine the image to be 32-bit.
-
 											load() will fill the input variables with the data read
 											from the bitmap file.
 
